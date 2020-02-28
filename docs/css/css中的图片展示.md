@@ -1,0 +1,1 @@
+// background-clip、src-set、object-fit、content也可以展示图片
