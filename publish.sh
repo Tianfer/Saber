@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 npm run build
-# cd docs/.vuepress/dist
+cd docs/.vuepress/dist
 git init
 git add .
 git commit -m 'publish'
