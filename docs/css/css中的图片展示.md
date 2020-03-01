@@ -1,4 +1,3 @@
-// background-clip、src-set、object-fit、content也可以展示图片
 # 图片展示相关
 css3中更新了一下跟图片相关的api，这里简单介绍下
 
@@ -10,8 +9,8 @@ css3中更新了一下跟图片相关的api，这里简单介绍下
 用法也就那样，有意思的地方是，它比box-sizing多了个padding-box
 
 ### image-set
-image-set是为了适配不同手机的分辨率而产生的，这里不就不得提到另外一个概念
-DPR:
+image-set是为了适配不同手机的分辨率而产生的，这里不就不得提到另外一个概念  
+DPR:  
 　　设备像素比DPR(devicePixelRatio)是默认缩放为100%的情况下，设备像素和CSS像素的比值  
 　　dpr，也被成为device pixel ratio，即物理像素与逻辑像素的比  
 比如在iphone6下屏幕宽度为375 dpr为2 那么他的设备像素就为 750  

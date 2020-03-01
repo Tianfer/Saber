@@ -20,4 +20,4 @@ hello和world之间四个空格，但是经过解析，展示到页面的时候�
 ```css
 .keep { white-space: pre; }
 ```
-要是放以前我就会写4个&nbsp;了
+要是放以前我就会写4个\&nbsp;了
