@@ -222,7 +222,7 @@ function promisify(func) {
 ## isPromise
 ```js
 function isPromise(promise) {
-  return promise.toString() === '[object Promise]'
+  return Object.prototype.toString.call(promise) === '[object Promise]'
 }
 ```
 
