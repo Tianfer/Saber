@@ -83,7 +83,6 @@ class MyPromise {
   then(onFulfilled, onRejected) {
     const { _value, _status } = this
 
-
     return new MyPromise((resolve, reject) => {
       const fulfilled = (value) => { // resolve中的值
         try {
@@ -191,6 +190,18 @@ class Promise {
       }
     })
   }
+}
+```
+
+## Promise.finally
+```js
+Promise.prototype.finally = function (cb) {
+  const P = this.constructor
+  return this.then((value) => {
+    return P.resolve(cb()).then(() => value)
+  }, (err) => {
+    return P.resolve(cb()).then(() => { throw err })
+  })
 }
 ```
 

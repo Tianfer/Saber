@@ -37,7 +37,7 @@ Function.prototype.myCall = function(ctx) {
     arr.push('arguments[' + i + ']')
   }
 
-  eval('obj.' + name + '(' + arr.join(',') + ')') // 执行
+  eval('ctx.' + name + '(' + arr.join(',') + ')') // 执行
   delete ctx[name] // 删除添加的方法
 }
 ```
@@ -60,8 +60,12 @@ sayName.myCall(obj, '青天明月有几时', '我今停杯一问之') // obj 青
 其实和call的实现差不多，也是遍历参数，然后用eval执行，就不多赘述了
 ```js
 Function.prototype.myApply = function (ctx) {
+  if (!ctx) {
+    ctx = window
+  }
+
   var name = '_' + this.name
-  ctx[name] = this || window
+  ctx[name] = this
   var args = arguments[1] || []
   var arr = []
   
